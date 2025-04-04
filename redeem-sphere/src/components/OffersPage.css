@@ -1,0 +1,117 @@
+.offers-container {
+  background-color: #E3F2FD;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form Container */
+.offer-form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.offer-form input,
+.offer-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Description Styling */
+.offer-form textarea {
+  height: 120px; /* Increased height for readability */
+  resize: vertical; /* Allows user to adjust size */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  overflow-y: auto;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Focus Effect */
+.offer-form input:focus,
+.offer-form textarea:focus {
+  border-color: #5FA8FF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(95, 168, 255, 0.5);
+}
+
+.offer-form button {
+  background: #5FA8FF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.offer-form button:hover {
+  background: #4A90E2;
+}
+
+/* Coupons List */
+.posted-coupons {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.coupon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+.popup-box {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #333;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-weight: bold;
+  z-index: 9999;
+  animation: slideFade 0.3s ease-in-out;
+}
+
+.popup-box.success {
+  background-color: #D4EDDA;
+  color: #155724;
+  border: 2px solid #28a745;
+}
+
+.popup-box.error {
+  background-color: #F8D7DA;
+  color: #721c24;
+  border: 2px solid #dc3545;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    top: 10px;
+  }
+  to {
+    opacity: 1;
+    top: 20px;
+  }
+}

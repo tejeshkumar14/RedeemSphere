@@ -1,0 +1,47 @@
+.help-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .help-content {
+    max-width: 800px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .faq {
+    margin-bottom: 30px;
+  }
+  
+  .question {
+    background: #f8f8f8;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .question h4 {
+    margin: 0;
+    color: #0056b3;
+  }
+  
+  .contact {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .contact p {
+    margin: 0;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,58 @@
+.homePage-container {
+  background-color: #E3F2FD; /* Soft light grayish-blue */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.homePage-couponContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.homePage-couponCard {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  color: #333;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homePage-couponCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.homePage-couponCard span {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.HomeCouponBuy {
+  font-weight: bold;
+    background: linear-gradient(135deg, #1E88E5, #1565C0); /* Vibrant blue gradient */
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.HomeCouponBuy:hover {
+  background: linear-gradient(135deg, #0D47A1, #004BA0); /* Deeper blue on hover */
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}

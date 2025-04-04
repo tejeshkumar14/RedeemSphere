@@ -1,0 +1,82 @@
+.footer {
+    background-color: #213029;
+    color: white;
+    padding: 20px 0;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Updated Follow Us Section */
+.footer-section.follow-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-section.follow-us h3 {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 0; /* Aligns icons with the 'F' in 'Follow Us' */
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #f4b400;
+}
+
+
+.footer-bottom {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}

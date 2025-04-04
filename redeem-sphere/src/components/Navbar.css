@@ -1,0 +1,82 @@
+/* Navbar Container */
+.header {
+    background-color: #F7F7F7;
+    width: 100vw;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+#logo {
+    height: 60px;
+}
+
+/* Navbar Links Container */
+#linksContainer {
+    background-color: #f6f6f6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end; /* Aligns links to the right */
+    width: 100%;
+}
+
+/* Navbar Links */
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end; /* Aligns list items to the right */
+}
+
+.header ul li {
+    list-style: none;
+}
+
+.header ul li a {
+    color: black;
+    text-decoration: none; /* Removes default underline */
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Remove default underline */
+.header ul li a:hover {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Bottom Underline Effect */
+.header ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #007BFF;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Expand Bottom Underline on Hover */
+.header ul li a:hover::after {
+    width: 100%;
+}
+
+/* Active Link Effect */
+.header ul li .active {
+    color: #007BFF; /* Change color of active link */
+    font-weight: bold;
+}
+
+.header ul li .active::after {
+    width: 100%; /* Keep underline on active link */
+}
