@@ -1,47 +1,79 @@
 .help-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .help-content {
-    max-width: 800px;
-    padding: 20px;
-    text-align: left;
-  }
-  
-  h2 {
-    color: #003366;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .faq {
-    margin-bottom: 30px;
-  }
-  
-  .question {
-    background: #f8f8f8;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-  }
-  
-  .question h4 {
-    margin: 0;
-    color: #0056b3;
-  }
-  
-  .contact {
-    background: #e3f2fd;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .contact p {
-    margin: 0;
-    font-size: 16px;
-  }
-  
+  background-color: #f0f8ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.help-content {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.help-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.issue-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.issue-section textarea {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.issue-section button {
+  margin-top: 20px;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.issue-section button:hover {
+  background-color: #2980b9;
+}
+
+.success-message {
+  margin-top: 15px;
+  color: green;
+  font-weight: 500;
+}
+
+.contact {
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 25px;
+}
+
+.contact h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.contact p {
+  font-size: 16px;
+  color: #555;
+}

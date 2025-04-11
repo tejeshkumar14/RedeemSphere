@@ -1,67 +1,52 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
-import './HelpPage.css'
+import React, { useState } from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import './HelpPage.css';
+
 const HelpPage = () => {
+  const [issue, setIssue] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (issue.trim()) {
+      console.log("Submitted Issue:", issue); // Replace with actual backend POST request
+      setSubmitted(true);
+      setIssue("");
+      setTimeout(() => setSubmitted(false), 4000);
+    }
+  };
+
   return (
-      <div className="help-container">
+    <div className="help-container">
       <Navbar />
       <div className="help-content">
-        <h2>Help & Support</h2>
-        
-        <section className="faq">
-          <h3>Frequently Asked Questions</h3>
-          <div className="question">
-            <h4>How do I redeem a coupon?</h4>
-            <p>To redeem a coupon, go to the Coupons page, select a coupon, and use the provided code at the respective store.</p>
-          </div>
-          <div className="question">
-            <h4>How do I post a coupon?</h4>
-            <p>Go to the Offer section, fill in the required details, and submit your coupon.</p>
-          </div>
-          <div className="question">
-            <h4>Is there a limit to how many coupons I can post?</h4>
-            <p>No, you can post as many coupons as you want, as long as they are valid.</p>
-          </div>
-          <div className="question">
-            <h4>Do coupons expire?</h4>
-            <p>Yes, each coupon has an expiration date. Make sure to use it before the expiry date.</p>
-          </div>
+        <h2>Need Help?</h2>
+        <p className="intro-text">Tell us about your problem and we'll get back to you as soon as possible.</p>
 
-          <div className="question">
-            <h4>Can I delete a coupon after posting it?</h4>
-            <p>Currently, you cannot delete a coupon once it's posted. Contact support for assistance if needed.</p>
-          </div>
+        <form onSubmit={handleSubmit} className="help-form">
+          <textarea
+            placeholder="Describe your issue here..."
+            value={issue}
+            onChange={(e) => setIssue(e.target.value)}
+            rows="8"
+            required
+          />
+          <button type="submit">Submit Issue</button>
+        </form>
 
-          <div className="question">
-            <h4>Are all coupons verified?</h4>
-            <p>Coupons are submitted by users, and while we encourage authenticity, we recommend checking details before using.</p>
-          </div>
+        {submitted && <div className="thank-you">Thank you for submitting your issue. We'll get back to you soon!</div>}
 
-          <div className="question">
-            <h4>Do I need an account to post a coupon?</h4>
-            <p>Yes, you must be logged in to post or redeem coupons.</p>
-          </div>
-
-          <div className="question">
-            <h4>How do I report an invalid coupon?</h4>
-            <p>If a coupon is invalid, click the 'Report' button on the coupon page or contact support.</p>
-          </div>
-
-          <div className="question">
-            <h4>Can I share my coupons with others?</h4>
-            <p>Yes! You can share the coupon code with friends or through social media directly from our platform.</p>
-          </div>
-        </section>
-
-        <section className="contact">
-          <h3>Contact Support</h3>
-          <p>If you need further assistance, email us at <strong>support@redeemsphere.com</strong> or call <strong>+91 9876543210</strong>.</p>
-        </section>
+        <div className="contact-box">
+          <h3>Other Ways to Reach Us</h3>
+          <p><strong>Email:</strong> support@redeemsphere.com</p>
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Live Chat:</strong> Coming soon!</p>
+        </div>
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default HelpPage;
