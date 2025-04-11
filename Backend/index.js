@@ -150,6 +150,8 @@ app.post("/api/coupons", async (req, res) => {
             companyLink,
             expiry: new Date(expiry),
             username,
+            status: "onSale",
+            boughtBy
         });
 
         await newCoupon.save();

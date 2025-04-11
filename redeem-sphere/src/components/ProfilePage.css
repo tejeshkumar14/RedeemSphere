@@ -1,7 +1,7 @@
 /* ProfilePage.css */
 
 .profile-container {
-    background-color: #f3f4f6;
+    background-color: #393E46;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -73,3 +73,42 @@
     font-size: 1rem;
     margin-top: 20px;
   }
+
+  .coupon-category {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+  
+  .coupon-category h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: #333;
+    border-bottom: 2px solid #00ADB5;
+    padding-bottom: 5px;
+  }
+  
+  .coupon-box {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+  }
+  
+  .coupon-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  .coupon-box p {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #444;
+  }
+  
+  .coupon-box strong {
+    color: #00ADB5;
+  }
+  

@@ -1,14 +1,14 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import "./Footer.css";
-import logo from '../assets/footerLogo.jpg'
+import logo from '../assets/logo.png'
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         {/* Social Media Links */}
-        <img src={logo} alt="" height={60}/>
+        <img src={logo} alt="" height={50}/>
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-icons">

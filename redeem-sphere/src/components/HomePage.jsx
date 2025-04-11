@@ -24,7 +24,7 @@ const HomePage = () => {
             const validCoupons = data.filter(coupon => {
               const expiryDate = new Date(coupon.expiry);
               expiryDate.setHours(0, 0, 0, 0); // Normalize to start of the day
-              return expiryDate >= today; // Compare properly
+              return expiryDate >= today && coupon.status === "onSale"; // Compare properly
             });
         
             setCoupons(validCoupons);
