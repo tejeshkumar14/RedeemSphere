@@ -1,5 +1,5 @@
 .homePage-container {
-  background-color: #E3F2FD; /* Soft light grayish-blue */
+  background-color: #393E46; /* Soft light grayish-blue */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,8 +18,8 @@
 }
 
 .homePage-couponCard {
-  background: linear-gradient(135deg, #a8edea, #fed6e3);
-  color: #333;
+  background: linear-gradient(135deg, #00ADB5, #fdfdfd);
+  color: black;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -39,9 +39,9 @@
 }
 
 .HomeCouponBuy {
-  font-weight: bold;
-    background: linear-gradient(135deg, #1E88E5, #1565C0); /* Vibrant blue gradient */
-    color: white;
+    font-weight: bold;
+    background: linear-gradient(135deg, #EEEEEE, #ffffff);
+    color: black;
     border: none;
     padding: 12px 22px;
     border-radius: 10px;
@@ -52,7 +52,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .HomeCouponBuy:hover {
-  background: linear-gradient(135deg, #0D47A1, #004BA0); /* Deeper blue on hover */
+  background: linear-gradient(135deg, #EEEEEE, #ffffff); /* Deeper blue on hover */
   transform: scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }

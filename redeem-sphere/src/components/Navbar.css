@@ -1,6 +1,6 @@
 /* Navbar Container */
 .header {
-    background-color: #F7F7F7;
+    background-color: #0D1117;
     width: 100vw;
     padding: 1rem 20px;
     display: flex;
@@ -10,12 +10,12 @@
 
 /* Logo */
 #logo {
-    height: 60px;
+    height: 50px;
 }
 
 /* Navbar Links Container */
 #linksContainer {
-    background-color: #f6f6f6;
+    background-color: #0D1117;
     padding: 10px 15px;
     border-radius: 8px;
     display: flex;
@@ -38,7 +38,7 @@
 }
 
 .header ul li a {
-    color: black;
+    color: #EEEEEE;
     text-decoration: none; /* Removes default underline */
     font-weight: 600;
     font-size: 16px;
@@ -50,7 +50,7 @@
 
 /* Remove default underline */
 .header ul li a:hover {
-    color: #007BFF;
+    color: #00ADB5;
     text-decoration: none;
 }
 
@@ -62,7 +62,7 @@
     bottom: -3px;
     width: 0%;
     height: 2px;
-    background-color: #007BFF;
+    background-color: #00ADB5;
     transition: width 0.3s ease-in-out;
 }
 
@@ -73,7 +73,7 @@
 
 /* Active Link Effect */
 .header ul li .active {
-    color: #007BFF; /* Change color of active link */
+    color: #00ADB5; /* Change color of active link */
     font-weight: bold;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import CompanyLogo from '../assets/RedeemSphere.jpg';
+import CompanyLogo from '../assets/logo.png';
 import axios from 'axios';
 
 const Navbar = () => {
