@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(cors({
     origin: process.env.FRONTEND_URL,
     credentials: true,
-    methods: ["GET", "POST", "DELETE"]
+    methods: ["GET", "PUT", "POST", "DELETE"],
+    allowedHeaders: ["Content-Type"]
 }));
 
 app.use(session({
@@ -151,7 +152,7 @@ app.post("/api/coupons", async (req, res) => {
             expiry: new Date(expiry),
             username,
             status: "onSale",
-            boughtBy
+            boughtBy: null
         });
 
         await newCoupon.save();
@@ -175,3 +176,19 @@ app.delete("/api/coupons/:id", async (req, res) => {
         res.status(500).json({ error: "Failed to delete coupon" });
     }
 });
+
+// Update coupon status to sold and set boughtBy
+app.put("/api/coupons/:id/buy", async (req, res) => {
+    try {
+      const { username } = req.body;
+      const updated = await Coupon.findByIdAndUpdate(
+        req.params.id,
+        { status: "sold", boughtBy: username },
+        { new: true }
+      );
+      res.json(updated);
+    } catch (err) {
+      res.status(500).json({ error: "Failed to update coupon" });
+    }
+  });
+  

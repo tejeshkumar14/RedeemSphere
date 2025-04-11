@@ -10,7 +10,7 @@ const couponSchema = new mongoose.Schema({
     username: { type: String, required: true }, // Automatically set from session
     status: {
         type: String,
-        enum: ['onSale', 'sold', 'bought'],
+        enum: ['onSale', 'sold'],
         default: 'onSale'
     },
     boughtBy: {

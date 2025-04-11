@@ -10,6 +10,7 @@ const ProfilePage = () => {
   const [allCoupons, setAllCoupons] = useState([]);
   const navigate = useNavigate();
 
+  
   useEffect(() => {
     const checkUser = () => {
       const storedUser = localStorage.getItem("user");
@@ -31,9 +32,17 @@ const ProfilePage = () => {
       .catch(err => console.error("Failed to fetch coupons", err));
   }, []);
 
-  const couponsOnSale = allCoupons.filter(c => c.username === user?.name && c.status === "onSale");
-  const couponsSold = allCoupons.filter(c => c.username === user?.name && c.status === "sold");
-  const couponsBought = allCoupons.filter(c => c.boughtBy === user?.name && c.status === "bought");
+  const couponsOnSale = allCoupons.filter(
+    c => c.username === user?.name && c.status === "onSale"
+  );
+  
+  const couponsBought = allCoupons.filter(
+    c => c.boughtBy === user?.name && c.status === "sold"
+  );
+  
+  const couponsSold = allCoupons.filter(
+    c => c.username === user?.name && c.status === "sold"
+  );
 
   return (
     <div className="profile-container">
@@ -56,7 +65,11 @@ const ProfilePage = () => {
                 <div key={c._id} className="coupon-box">
                   <p><strong>Title:</strong> {c.title}</p>
                   <p><strong>Company:</strong> {c.companyName}</p>
-                  <p><strong>Expiry:</strong> {new Date(c.expiry).toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" })}</p>
+                  <p><strong>Expiry:</strong> {new Date(c.expiry).toLocaleDateString("en-US", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                  })}</p>
                 </div>
               ))}
 
